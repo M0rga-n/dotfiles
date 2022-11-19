@@ -13,6 +13,8 @@ autoload -U promptinit && promptinit
 autoload _U colors && colors
 autoload _Uz compinit && compinit
 
+export PATH="$PATH:$HOME/.local/bin"
+
 precmd() {
 	source $DOTFILES/zsh/aliases.zsh
 }
