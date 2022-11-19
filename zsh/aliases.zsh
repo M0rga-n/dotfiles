@@ -1,5 +1,5 @@
 alias d=docker
-alial dc=docker-compose
+alias dc=docker-compose
 
 # alias v='lvim -w ~/.vimlog "$@"'
 # alias vi='lvim -w ~/.vimlog "$@"'

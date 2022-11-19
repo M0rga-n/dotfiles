@@ -17,4 +17,4 @@ precmd() {
 	source $DOTFILES/zsh/aliases.zsh
 }
 
-eval "$(starship init zsh)""
+eval "$(starship init zsh)"
