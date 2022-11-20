@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   use("nvim-lua/plenary.nvim")
   use("nvim-lua/popup.nvim")
   use("nvim-telescope/telescope.nvim")
+  use 'lervag/vimtex'
   
   use("ThePrimeagen/git-worktree.nvim")
   end)
