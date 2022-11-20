@@ -1,9 +1,9 @@
 alias d=docker
 alias dc=docker-compose
 
-#alias v='lvim -w ~/.vimlog "$@"'
-#alias vi='lvim -w ~/.vimlog "$@"'
-#alias vim='lvim -w ~/.vimlog "$@"'
+alias v='nvim -w ~/.vimlog "$@"'
+alias vi='nvim -w ~/.vimlog "$@"'
+alias vim='nvim -w ~/.vimlog "$@"'
 
 alias l='exa -lah'
 alias ls=exa
