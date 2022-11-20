@@ -1,4 +1,3 @@
-print("hello2")
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
