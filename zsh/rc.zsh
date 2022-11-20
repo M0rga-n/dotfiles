@@ -14,8 +14,6 @@ autoload -U promptinit && promptinit
 autoload _U colors && colors
 autoload _Uz compinit && compinit
 
-export VISUAL=lvim
-export EDITOR=lvim
 export PATH="$PATH:$HOME/.local/bin"
 
 precmd() {
