@@ -3,7 +3,9 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    'clangd', 
+    'clangd',
+    'sumneko_lua',
+    'texlab'
 })
 
 local cmp = require('cmp')
@@ -26,16 +28,13 @@ lsp.setup_nvim_cmp({
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
+    configure_diagnostics = true,
     sign_icons = {
         error = 'E',
         warn = 'W',
         hint = 'H',
         info = 'I'
     }
-})
-
-vim.diagnostic.config({
-    virtual_text = true,
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -58,4 +57,21 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
+lsp.configure('sumneko_lua', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
+
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true,
+    underline = true,
+    signs = true,
+    update_in_insert = false,
+})
